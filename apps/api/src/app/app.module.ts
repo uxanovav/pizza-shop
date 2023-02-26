@@ -6,6 +6,7 @@ import { User } from '../users/users.model';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { UserModule } from '../users/users.module';
+import { AuthModule } from '../auth/auth.module';
 @Module({
   imports: [
     ConfigModule.forRoot({
@@ -22,6 +23,7 @@ import { UserModule } from '../users/users.module';
       autoLoadModels: true,
     }),
     UserModule,
+    AuthModule,
   ],
   controllers: [AppController],
   providers: [AppService],
