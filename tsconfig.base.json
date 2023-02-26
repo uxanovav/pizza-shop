@@ -14,7 +14,10 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@pizza-shop/shared-interfaces": ["libs/shared-interfaces/*"],
+      "@pizza-shop/api/*": ["apps/api/*"],
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }

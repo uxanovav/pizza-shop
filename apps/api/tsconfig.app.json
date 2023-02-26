@@ -5,7 +5,11 @@
     "module": "commonjs",
     "types": ["node"],
     "emitDecoratorMetadata": true,
-    "target": "es2015"
+    "target": "es2015",
+    "paths": {
+      "@pizza-shop/shared-interfaces/*": ["libs/shared-interfaces/*"],
+      "@pizza-shop/api/*": ["apps/api/*"],
+    }
   },
   "exclude": ["jest.config.ts", "src/**/*.spec.ts", "src/**/*.test.ts"],
   "include": ["src/**/*.ts"]

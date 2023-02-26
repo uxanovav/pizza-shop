@@ -1,4 +1,5 @@
 import { ApiProperty } from '@nestjs/swagger';
+import { UserRole } from '@pizza-shop/shared-interfaces/src/lib/User';
 import {
   IsEmail,
   IsEnum,
@@ -7,7 +8,6 @@ import {
   MaxLength,
   MinLength,
 } from 'class-validator';
-import { UserRole } from '../users.model';
 
 export class CreateUserDto {
   @ApiProperty({ type: 'string', format: 'string', required: true })
