@@ -1,19 +1,12 @@
 import { ApiProperty } from '@nestjs/swagger';
+import {
+  UserRole,
+  IUserCreate,
+} from '@pizza-shop/shared-interfaces/src/lib/User';
 import { Column, DataType, Model, Table } from 'sequelize-typescript';
 
-export enum UserRole {
-  USER = 'USER',
-  ADMIN = 'ADMIN',
-}
-
-interface ICreateUserAttributes {
-  email: string;
-  password: string;
-  role: UserRole;
-}
-
 @Table({ tableName: 'users' })
-export class User extends Model<User, ICreateUserAttributes> {
+export class User extends Model<User, IUserCreate> {
   @ApiProperty({ example: 1 })
   @Column({
     type: DataType.INTEGER,
