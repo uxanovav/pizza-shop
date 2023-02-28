@@ -1,0 +1,17 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "outDir": "../../dist/out-tsc",
+    "declaration": true,
+    "types": [],
+    "paths": {
+      "@pizza-shop/shared-frontend-components": [
+        "libs/shared-frontend-components/*"
+      ],      
+      "@pizza-shop/shared-interfaces/*": ["libs/shared-interfaces/*"],
+      "@pizza-shop/api/*": ["apps/api/*"],
+    }
+  },
+  "include": ["src/**/*.ts"],
+  "exclude": ["jest.config.ts", "src/**/*.spec.ts"]
+}
