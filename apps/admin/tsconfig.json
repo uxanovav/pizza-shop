@@ -12,7 +12,15 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "incremental": true,
-    "types": ["jest", "node"]
+    "types": ["jest", "node"],
+    "paths": {
+      "@pizza-shop/admin/*": ["apps/admin/*"],
+      "@pizza-shop/shared-frontend-components/*": [
+        "libs/shared-frontend-components/*"
+      ],
+      "@pizza-shop/shared-interfaces/*": ["libs/shared-interfaces/*"],
+      "@pizza-shop/api/*": ["apps/api/*"],
+    }
   },
   "include": ["**/*.ts", "**/*.tsx", "**/*.js", "**/*.jsx", "next-env.d.ts"],
   "exclude": [
